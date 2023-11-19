@@ -1,0 +1,23 @@
+<!-- visitor_counter/templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Count</title>
+</head>
+
+<body>
+
+    <h1>Visitor Count: {{ visitor_count }}</h1>
+
+    <form action="{% url 'reset_count' %}" method = "post">
+        {% csrf_token %}
+        <button type="submit">Reset Count</button>
+    </form>
+
+
+</body>
+
+</html>
